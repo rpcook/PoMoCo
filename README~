@@ -1,11 +1,3 @@
-Modifications to GitHub Fork of PoMoCo 1.0 by GitHub user rpcook
-Added code to automate connection to BlueTooth Hexy under Linux in ServotorComm.py
-PoMoCo_demo.py has minimised interface for demonstrating Hexy and most buttons use Inverse Kinematic code developed by me to position Hexy's body accurately. The code's not packaged properly, neat, nor probably in the right place, but it does (just about work). Neatness to follow.
-
-rpcook license terms as for ArcBotics below.
-
-ArcBotics Notes below:
-
 PoMoCo 0.9 to 1.0 Changes:
 1.) All moves now run out of the Moves folder. 
 

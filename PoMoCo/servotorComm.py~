@@ -18,7 +18,7 @@ class runMovement(threading.Thread):
         self.function=function
         self.args = args
         self.start()
-        #print "end of runMovement call"
+        print "end of runMovement call"
 
     def run(self):
         self.function(*self.args)

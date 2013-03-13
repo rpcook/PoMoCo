@@ -10,7 +10,6 @@ from servotorComm import runMovement
 stepPerS = 5
 
 class hexapod():
-    # TODO define letter writing function (in this scope?)
 
     def __init__(self,con):
         self.con = con
@@ -44,8 +43,6 @@ class neck():
         self.con.servos[self.servoNum].setPos(deg=deg)
 
 class leg():
-    # TODO add some class variables defining offsets and angles of legs for robot in Hexy co-ordinates
-    # TODO define IK function(s) in this scope
 
     def __init__(self,con,name,hipServoNum,kneeServoNum,ankleServoNum,simOrigin=(0,3,0)):
         self.con = con
