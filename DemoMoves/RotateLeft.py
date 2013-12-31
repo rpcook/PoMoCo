@@ -1,37 +1,43 @@
 import time
- 
-deg = 40
+import math
+from ikLibrary import * # Inverse-Kinematic Library developed by Rob Cook, information on http://robcook.eu
 
-#set neck to where body is turning
-hexy.neck.set(deg)
+# scale factor (distance from neutral in step direction)
+s=23
+# direction (CCW from forwards)
+theta = math.pi
 
-#re-plant tripod2 deg degrees forward
-for leg in hexy.tripod2:
-    leg.replantFoot(deg,stepTime=0.2)
-time.sleep(0.3)
-
-#raise tripod1 feet
-for leg in hexy.tripod1:
-    leg.setFootY(int(floor/2.0))
-time.sleep(0.3)
-
-#swing tripod2 feet back 2*deg degrees (to -deg)
-for leg in hexy.tripod2:
-    leg.setHipDeg(-deg,stepTime=0.3)
-
-#reset neck as body turns
-hexy.neck.set(0)
-time.sleep(0.4)
-
-#lower tripod1 feet
-for leg in hexy.tripod1:
-    leg.setFootY(floor)
-time.sleep(0.3)
-
-#re-plant legs to starting position
-hexy.LF.replantFoot(deg,stepTime=0.3)
-hexy.RM.replantFoot(1,stepTime=0.3)
-hexy.LB.replantFoot(-deg,stepTime=0.3)
-
-time.sleep(0.5)
+# define movements to walk in a particular direction
+# step position 2, tripod 1 in upper mid position, tripod 2 in lower mid position
+hexyTripod1GlobalOffset(0,0,-14)
+hexyTripod2GlobalOffset(0,0,0)
+time.sleep(0.2)
+# step position 3, tripod 1 in rear position, tripod 2 in forward position
+hexyTripod1GlobalOffsetRot(0,0,0,0.15)
+hexyTripod2GlobalOffsetRot(0,0,0,-0.15)
+time.sleep(0.2)
+# step position 4, tripod 1 in lower mid position, tripod 2 in upper mid position
+hexyTripod1GlobalOffset(0,0,0)
+hexyTripod2GlobalOffset(0,0,-14)
+time.sleep(0.2)
+# step position 1, tripod 1 in forward position, tripod 2 in rear position
+hexyTripod1GlobalOffsetRot(0,0,0,-0.15)
+hexyTripod2GlobalOffsetRot(0,0,0,0.15)
+time.sleep(0.2)
+# step position 2, tripod 1 in upper mid position, tripod 2 in lower mid position
+hexyTripod1GlobalOffset(0,0,-14)
+hexyTripod2GlobalOffset(0,0,0)
+time.sleep(0.2)
+# step position 3, tripod 1 in rear position, tripod 2 in forward position
+hexyTripod1GlobalOffsetRot(0,0,0,0.15)
+hexyTripod2GlobalOffsetRot(0,0,0,-0.15)
+time.sleep(0.2)
+# step position 4, tripod 1 in lower mid position, tripod 2 in upper mid position
+hexyTripod1GlobalOffset(0,0,0)
+hexyTripod2GlobalOffset(0,0,-14)
+time.sleep(0.2)
+# step position 1, tripod 1 in forward position, tripod 2 in rear position
+hexyTripod1GlobalOffsetRot(0,0,0,-0.15)
+hexyTripod2GlobalOffsetRot(0,0,0,0.15)
+time.sleep(0.2)
 

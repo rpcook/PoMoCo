@@ -43,8 +43,8 @@ class App:
         #self.killButton.grid(row=0,column=4)
         
         #arrays for icons, commands
-        iconList = ["move_fwdleft.gif", "move_left.gif", "move_backleft.gif", "move_fwds.gif", "stop.gif", "move_back.gif", "move_fwdright.gif", "move_right.gif", "move_backright.gif", "rotate_ccw.gif", "rotate_cw.gif", "dance.gif", "sign_x.gif", "sign_hexy.gif", "sign_name.gif"]
-        commandList = ["crab_fwdleft", "crab_left", "crab_backleft", "crab_fwd", "", "crab_back", "crab_fwdright", "crab_right", "crab_backright", "RotateLeft", "RotateRight", "dance_random", "sign_x", "sign_hexy", "sign_name"]
+        iconList = ["move_fwdleft.gif", "move_left.gif", "move_backleft.gif", "move_fwds.gif", "stop.gif", "move_back.gif", "move_fwdright.gif", "move_right.gif", "move_backright.gif", "rotate_ccw.gif", "rotate_cw.gif", "dance.gif", "sixaxis.gif", "sign_hexy.gif", "sign_name.gif"]
+        commandList = ["crab_fwdleft", "crab_left", "crab_backleft", "crab_fwd", "", "crab_back", "crab_fwdright", "crab_right", "crab_backright", "RotateLeft", "RotateRight", "dance_random", "SixAxisBinary", "sign_hexy", "sign_name"]
         
         #draw all the buttons and add icons/ commands
         counter = 0
