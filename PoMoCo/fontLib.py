@@ -1,3 +1,6 @@
+import math
+from itertools import repeat
+
 def letterPath(l):
     penDownHeight = -7
                                              
